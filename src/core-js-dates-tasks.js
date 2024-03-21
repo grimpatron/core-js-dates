@@ -266,13 +266,16 @@ function getWeekNumberByDate(date) {
 //   throw new Error('Not implemented');
 // }
 function getNextFridayThe13th(date) {
-  while ('Friday the 13th') {
+  let found = false;
+  while (!found) {
     date.setDate(13);
     if (date.getDay() === 5) {
-      return date;
+      found = true;
+    } else {
+      date.setMonth(date.getMonth() + 1);
     }
-    date.setMonth(date.getMonth() + 1);
   }
+  return date;
 }
 
 /**
