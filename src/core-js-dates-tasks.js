@@ -248,7 +248,6 @@ function getWeekNumberByDate(date) {
   const raznica = 2025 - UTCFullYear;
   const sdvigWeek = raznica / 7;
 
-  console.log('!!!', raznica, sdvigWeek, Math.ceil(sdvigWeek));
   return weekNo - 1 + Math.ceil(sdvigWeek);
 }
 
